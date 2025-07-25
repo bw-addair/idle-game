@@ -11,7 +11,7 @@ let prestige  = 0;         // prestige currency
 let totalEarned = 0;       // lifetime coins (for prestige calculation)
 
 /* ----- sounds ---- */
-const soundClick = document.getElementById('soundClick');
+const sndClick = document.getElementById('sndClick');
 
 // on click
 clickBtn.addEventListener('click', () => {
@@ -21,10 +21,6 @@ clickBtn.addEventListener('click', () => {
     updateDisplay();
 });
 
-// on big win
-if (bigWin) {
-    sndWin.play();
-}
 
 /* ---- DOM shortcuts ---- */
 const $ = id => document.getElementById(id);
