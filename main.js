@@ -11,8 +11,7 @@ let prestige  = 0;         // prestige currency
 let totalEarned = 0;       // lifetime coins (for prestige calculation)
 
 /* ----- sounds ---- */
-const sndClick = document.getElementById('sndClick');
-const sndWin   = document.getElementById('sndWin');
+const soundClick = document.getElementById('soundClick');
 
 // on click
 clickBtn.addEventListener('click', () => {
@@ -25,10 +24,6 @@ clickBtn.addEventListener('click', () => {
 // on big win
 if (bigWin) {
     sndWin.play();
-}
-/* -- mute button -- */
-function toggleMute() {
-    document.querySelectorAll('audio').forEach(a => a.muted = !a.muted);
 }
 
 /* ---- DOM shortcuts ---- */
@@ -146,15 +141,3 @@ setInterval(save, 10000);
 /* ---- initial load ---- */
 load();
 render();
-
-/* mute button p2 */
-const muteBtn = document.getElementById('muteBtn');
-let muted = false;
-
-muteBtn.addEventListener('click', () => {
-    muted = !muted;
-    document.querySelectorAll('audio').forEach(a => a.muted = muted);
-    muteBtn.textContent = muted ? '🔇' : '🔊';
-});
-
-
