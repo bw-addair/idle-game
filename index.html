@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Idle Clicker – Starter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="title">Coins: <span id="coins">0</span></h1>
+
+  <!-- Manual clicking -->
+  <button id="clickBtn" class="big-btn">Click Me!</button>
+
+  <!-- Upgrade store -->
+  <section id="store">
+    <h2>Store</h2>
+
+    <!-- Auto-clicker upgrade -->
+    <button id="buyAutoBtn">
+      Auto-Clicker (<span id="autoCost">50</span>c)  ×<span id="autoCount">0</span>
+    </button>
+
+    <!-- Click-power upgrade -->
+    <button id="buyPowerBtn">
+      Click Power (<span id="powerCost">100</span>c)  ×<span id="powerCount">0</span>
+    </button>
+  </section>
+
+  <!-- Prestige -->
+  <section id="prestige" hidden>
+    <h2>Prestige</h2>
+    <button id="resetBtn">Reset for <span id="prestigeGain">0</span> prestige</button>
+  </section>
+
+  <!-- Save / load / wipe -->
+  <footer>
+    <button id="saveBtn">Save</button>
+    <button id="loadBtn">Load</button>
+    <button id="wipeBtn">Wipe</button>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

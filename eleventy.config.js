@@ -1,0 +1,1 @@
+// eleventy.config.jsmodule.exports = function (eleventyConfig) {// copy style.css and main.js unchanged to _siteeleventyConfig.addPassthroughCopy("style.css");eleventyConfig.addPassthroughCopy("main.js");};
