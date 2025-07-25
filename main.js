@@ -146,3 +146,15 @@ setInterval(save, 10000);
 /* ---- initial load ---- */
 load();
 render();
+
+/* mute button p2 */
+const muteBtn = document.getElementById('muteBtn');
+let muted = false;
+
+muteBtn.addEventListener('click', () => {
+    muted = !muted;
+    document.querySelectorAll('audio').forEach(a => a.muted = muted);
+    muteBtn.textContent = muted ? '🔇' : '🔊';
+});
+
+
