@@ -13,6 +13,22 @@ let totalEarned = 0;       // lifetime coins (for prestige calculation)
 /* ----- sounds ---- */
 const sndClick = document.getElementById('sndClick');
 
+const sounds = {
+  click: 'bird-is-a-word-peter-griffin.mp3',
+};
+
+function playSound(src) {
+  const audio = new Audio(src);
+    audio.play();
+}
+
+// use it
+clickBtn.addEventListener('click', () => {
+  playSound(sounds.click);
+  coins++;
+  updateDisplay();
+});
+
 // on click
 clickBtn.addEventListener('click', () => {
     sndClick.currentTime = 0;
