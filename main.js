@@ -10,6 +10,27 @@ let power     = 1;         // coins per manual click
 let prestige  = 0;         // prestige currency
 let totalEarned = 0;       // lifetime coins (for prestige calculation)
 
+/* ----- sounds ---- */
+const sndClick = document.getElementById('sndClick');
+const sndWin   = document.getElementById('sndWin');
+
+// on click
+clickBtn.addEventListener('click', () => {
+    sndClick.currentTime = 0;
+    sndClick.play();
+    coins++;
+    updateDisplay();
+});
+
+// on big win
+if (bigWin) {
+    sndWin.play();
+}
+/* -- mute button -- */
+function toggleMute() {
+    document.querySelectorAll('audio').forEach(a => a.muted = !a.muted);
+}
+
 /* ---- DOM shortcuts ---- */
 const $ = id => document.getElementById(id);
 const coinSpan      = $('coins');
